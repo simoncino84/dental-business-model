@@ -9,7 +9,7 @@
 <body>
   <div class="loading"><strong>Dental Business Model</strong><span>Caricamento del percorso…</span></div>
   <script>
-    Promise.all(["00","01","02","03"].map(function(n){return fetch("assets/page-"+n+".txt").then(function(r){if(!r.ok)throw new Error("Caricamento non riuscito");return r.text();});}))
+    Promise.all(["00","01","02","03"].map(function(n){return fetch("assets/page-"+n+".txt?v=20260729-2").then(function(r){if(!r.ok)throw new Error("Caricamento non riuscito");return r.text();});}))
       .then(function(parts){document.open();document.write(parts.join(""));document.close();})
       .catch(function(){document.body.innerHTML='<div class="loading"><strong>Riprova tra qualche istante.</strong><span>Pubblicazione in corso</span></div>';});
   </script>
