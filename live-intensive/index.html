@@ -5,12 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Live Intensive 4–5 dicembre 2026 | Dental Business Model</title>
   <style>html,body{margin:0;background:#07192b;color:white;font-family:Arial,sans-serif}body{min-height:100vh;display:grid;place-items:center}.loading{text-align:center}.loading strong{display:block;font-family:Georgia,serif;font-size:30px;font-weight:400}.loading span{display:block;margin-top:12px;color:#9ce8ee;font-size:11px;letter-spacing:.15em;text-transform:uppercase}</style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1554363362163174');fbq('track','PageView');window.dbmMetaPageView=true;
+  </script>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1554363362163174&amp;ev=PageView&amp;noscript=1" alt=""></noscript>
   <div class="loading"><strong>Dental Business Model</strong><span>Caricamento Live Intensive…</span></div>
   <script>
+    var metaAdsPixel = '<script>if(!window.dbmMetaPageView){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1554363362163174");fbq("track","PageView");window.dbmMetaPageView=true}<\/script>';
     Promise.all(["00","01","02","03","04"].map(function(n){return fetch("assets/page-"+n+".txt?v=20260730-1").then(function(r){if(!r.ok)throw new Error("Caricamento non riuscito");return r.text();});}))
-      .then(function(parts){document.open();document.write(parts.join(""));document.close();})
+      .then(function(parts){parts[0]=parts[0].replace("</head>",metaAdsPixel+"</head>");document.open();document.write(parts.join(""));document.close();})
       .catch(function(){document.body.innerHTML='<div class="loading"><strong>Riprova tra qualche istante.</strong><span>Pubblicazione in corso</span></div>';});
   </script>
 </body>
