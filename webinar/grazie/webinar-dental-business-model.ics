@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Dental Business Model//Webinar Metodo STUDIO//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:webinar-metodo-studio-20261026@dentalbusinessmodel.eu
+DTSTAMP:20261005T071800Z
+DTSTART:20261026T200000Z
+DTEND:20261026T210000Z
+SUMMARY:Webinar DBM - Quanto vale davvero il tuo studio senza di te?
+DESCRIPTION:Webinar gratuito live con Simone Stori e Nicola Pavan. Scopri il Metodo S.T.U.D.I.O.\n\nAccedi su Zoom: https://us02web.zoom.us/j/87182985486?pwd=dFpItNY5QjEsKaOq4IdRzHVRciVGF3.1
+LOCATION:Zoom - https://us02web.zoom.us/j/87182985486?pwd=dFpItNY5QjEsKaOq4IdRzHVRciVGF3.1
+URL:https://us02web.zoom.us/j/87182985486?pwd=dFpItNY5QjEsKaOq4IdRzHVRciVGF3.1
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT1D
+ACTION:DISPLAY
+DESCRIPTION:Domani alle 21:00: webinar Dental Business Model
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Tra un'ora inizia il webinar Dental Business Model
+END:VALARM
+END:VEVENT
+END:VCALENDAR
