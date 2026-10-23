@@ -6,12 +6,13 @@
   var script = d.currentScript;
   var page = script && script.getAttribute('data-dbm-page') || 'website';
   var products = {
+    agenda: {id: 'dbm-agenda-intenzionale', name: 'Libro Agenda Intenzionale', category: 'libro'},
     videocorso: {id: 'dbm-videocorso', name: 'Videocorso Da Studio a Impresa', category: 'videocorso'},
     webinar: {id: 'dbm-webinar-2026-10-26', name: 'Webinar Metodo S.T.U.D.I.O. 26 ottobre 2026', category: 'webinar'},
     live: {id: 'dbm-live-2026-12-04', name: 'Live Intensive 4-5 dicembre 2026', category: 'live-intensive'},
     mastermind: {id: 'dbm-mastermind-2027', name: 'Mastermind 2027', category: 'mastermind'}
   };
-  var productKey = page.indexOf('webinar') === 0 ? 'webinar' : page.indexOf('videocorso') === 0 ? 'videocorso' : page.indexOf('live') === 0 ? 'live' : 'mastermind';
+  var productKey = page.indexOf('agenda') === 0 ? 'agenda' : page.indexOf('webinar') === 0 ? 'webinar' : page.indexOf('videocorso') === 0 ? 'videocorso' : page.indexOf('live') === 0 ? 'live' : 'mastermind';
   var product = products[productKey];
   var thankYou = /-thanks$/.test(page);
   var consentKey = 'dbm_meta_consent_v1';
@@ -143,3 +144,4 @@
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', renderConsent, {once:true});
   else renderConsent();
 })(window, document);
+
