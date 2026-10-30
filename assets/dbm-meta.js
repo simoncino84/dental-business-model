@@ -127,7 +127,17 @@
     if (!link) return;
     var url;
     try { url = new URL(link.href, w.location.href); } catch (_) { return; }
-    if (url.hostname === 'crm.dentistaefficace.it' && url.pathname.replace(/\/$/, '') === '/studio-impresa-2026') {
+    if (link.hasAttribute('data-amazon-format') || url.hostname === 'link.amazon' || /(^|\.)amazon\./.test(url.hostname)) {
+      var format = link.getAttribute('data-amazon-format') || 'amazon';
+      var value = parseFloat(link.getAttribute('data-amazon-price'));
+      var bookCheckout = params();
+      bookCheckout.content_name = product.name + ' - ' + format;
+      bookCheckout.content_ids = [product.id + '-' + format];
+      bookCheckout.content_type = 'product';
+      bookCheckout.currency = 'EUR';
+      if (!isNaN(value)) bookCheckout.value = value;
+      track('InitiateCheckout', bookCheckout, 'checkout_' + product.id + '_' + format);
+    } else if (url.hostname === 'crm.dentistaefficace.it' && url.pathname.replace(/\/$/, '') === '/studio-impresa-2026') {
       var checkout = params(); checkout.content_name = products.live.name; checkout.content_ids = [products.live.id]; checkout.content_category = products.live.category;
       track('InitiateCheckout', checkout, 'checkout_' + products.live.id);
     } else if (url.hostname === 'wa.me' || url.hostname === 'api.whatsapp.com' || url.protocol === 'tel:') {
